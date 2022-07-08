@@ -1,22 +1,249 @@
-/*!
- * bootScore custom styles
- */
+/*#region VARIABLES*/
 
-// Add your own code here!
-// Because this file is compiled after Bootstrap, you're also able to use Bootstrap mixins for better code.
-// Some examples can be found here: https://bootscore.me/documentation/bootstrap-css-sass
+$orange: #D72300;
+$blue: #1644E8;
 
-/*-----------------------------------------------------------------------------
+.orange-color {
+  color: $orange;
+}
 
-  ATTENTION! This is the parent-theme's file. Your work will be lost by the 
-  next update!
+.blue-color {
+  color: $blue;
+}
 
-  Wouldn't you prefer to use one of our child themes and be update-safe?
+/*#endregion VARIABLES*/
 
-  bootscore-child: 
-  https://github.com/bootscore/bootscore-child/archive/refs/heads/main.zip
+/*#region FONTS*/
 
-  bootcommerce-child:
-  https://github.com/bootscore/bootcommerce-child/archive/refs/heads/main.zip
+@font-face {
+  font-family: "MullerRegular";
+  src: url("../../fonts/Muller/MullerRegular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 
------------------------------------------------------------------------------*/
+@font-face {
+  font-family: "MullerMedium";
+  src: url("../../fonts/Muller/MullerMedium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MullerLight";
+  src: url("../../fonts/Muller/MullerLight.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MullerBold";
+  src: url("../../fonts/Muller/MullerBold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTFirsNeue-Regular";
+  src: url("../../fonts/TTFirsNeue/TTFirsNeue-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTFirsNeue-Light";
+  src: url("../../fonts/TTFirsNeue/TTFirsNeue-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTFirsNeue-Bold";
+  src: url("../../fonts/TTFirsNeue/TTFirsNeue-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*#endregion FONTS*/
+
+/*#region RESET*/
+
+#page {
+  background-color: black;
+}
+#nav-main .menu-item:last-child .nav-link {
+  padding-right: 0.5rem;
+}
+#content {
+  min-height: 86vh;
+}
+
+/*#endregion RESET*/
+
+/*#region HEADER*/
+
+.nav-wrapper {
+  position: absolute;
+  right: 74px;
+
+  #nav-main {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    div.offcanvas {
+      top: 88px !important;
+  
+      &-body {
+        flex-direction: column;
+        align-items: end;
+  
+        .navbar-brand {
+          margin-bottom: 64px;
+          margin-top: 88px;
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+  
+        #bootscore-navbar {
+          flex-direction: column;
+  
+          .nav-link {
+            color: white;
+            opacity: 0.5;
+            text-align: end;
+            font-size: 16px;
+            line-height: 16px;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-bottom: 20px;
+
+            &:hover {
+              opacity: 1;
+            }
+
+            &.active {
+              opacity: 1;
+
+              .dot-main-menu {
+                color: $orange;
+              }
+            }
+          }
+        }
+      }
+    }
+  }  
+}
+/*#endregion RHEADER*/
+
+/*#region HEADER-SECTION*/
+
+section.header-section {
+  padding-top: 90px;
+
+  .title-line {
+    font-family: 'TTFirsNeue-Regular';
+    font-size: 126px;
+    line-height: 100%;
+    color: white;
+    font-weight: normal;
+    text-transform: uppercase;
+    user-select: none;
+
+    .main-title-letter {
+      color: $orange;
+    }
+  }
+
+  &.main {
+    .title-line:nth-child(2) {
+      margin-left: 200px;
+    }
+  }
+}
+
+/*#endregion HEADER-SECTION*/
+
+.main-blur {
+  width: 1030px;
+  height: 740px;
+  background-image: url('../../img/main_blur.png');
+  position: absolute;
+  background-size: cover;
+  top: 0;
+}
+
+/*#region MAIN-DESCRIPTION-SECTION*/
+
+.main-description {
+  padding-top: 20px;
+
+  .description-paragraph {
+    font-family: 'MullerRegular';
+    line-height: 140%;
+    font-size: 18px;
+    max-width: 153px;
+    color: white;
+
+    &.second {
+      margin-top: 30px;
+    }
+
+    &.third {
+      margin-top: 122px;
+
+      .orange-color {
+        font-family: 'MullerBold';
+      }
+    }
+  }
+  .col-4 {
+    display: flex;
+    justify-content: start;
+    padding-left: 100px;
+
+    .order-btn {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 15px 20px;
+      background: #FFFFFF;
+      border-radius: 30px;
+      font-family: 'MullerBold';
+      letter-spacing: -0.04em;
+      font-size: 18px;
+      line-height: 21px;
+      width: 164px;
+      height: 51px;
+    }
+  }
+}
+
+/*#endregion RegionName*/
+
+/*#region RegionName*/
+/*#endregion RegionName*/
+
+/*#region RegionName*/
+/*#endregion RegionName*/
+
+/*#region RegionName*/
+/*#endregion RegionName*/
+
+/*#region RegionName*/
+/*#endregion RegionName*/
+
+/*#region RegionName*/
+/*#endregion RegionName*/
+
+/*#region RegionName*/
+/*#endregion RegionName*/
+
+/*#region RegionName*/
+/*#endregion RegionName*/
+
+/*#region RegionName*/
+/*#endregion RegionName*/
+
+/*#region RegionName*/
+/*#endregion RegionName*/
